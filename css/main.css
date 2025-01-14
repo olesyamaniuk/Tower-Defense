@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
 }
@@ -10,8 +10,8 @@
 
 html {
   scroll-behavior: smooth;
-  background: #1b1b2f;
-  color: #ffffffd9;
+  background: #d9dee1;
+  color: #111111d9;
 }
 
 body {
@@ -113,8 +113,9 @@ a {
   background: transparent;
   display: flex;
   height: 64px;
-  background: #001731;
-  box-shadow: 0px 0px 36px 0px #9cfdfc80;
+  background: #333333;
+
+  border-bottom: 1px solid #d9393a;
 }
 .header__background {
   position: absolute;
@@ -126,8 +127,9 @@ a {
   z-index: -1;
   -webkit-transition: left 0.3s ease;
   transition: left 0.3s ease;
-  background: #001731;
-  box-shadow: 0px 0px 36px 0px #9cfdfc80;
+  background: #333333;
+
+  border-bottom: 1px solid #d9393a;
 }
 .header.is-open .header__background {
   left: 0;
@@ -193,7 +195,7 @@ a {
   top: 100%;
   right: -100%;
   width: 100%;
-  height: 457px;
+  height: 657px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   z-index: 999;
@@ -201,16 +203,16 @@ a {
   padding: 0px 32px;
 
   border-radius: 0px 0px;
-  gap: 32px;
-  background: #001731;
+  gap: 48px;
+  background: #333333;
 }
 .navigation__list.is-open {
   right: 0;
 }
 .navigation__link {
-  font-family: Open Sans;
+  font-family: Poppins;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 24px;
   letter-spacing: 0.005em;
   text-align: center;
@@ -220,7 +222,10 @@ a {
   text-decoration: none;
   color: #ffffff;
 }
-
+.navigation__link:hover,
+.navigation__link:focus {
+  color: #ffeb00;
+}
 .header.is-open {
   background-color: transparent;
 }
@@ -238,7 +243,7 @@ a {
     display: none;
   }
   .header-title {
-    margin-right: 365px;
+    margin-right: 130px;
   }
   .header {
     width: 100%;
@@ -279,7 +284,7 @@ a {
 
     padding-block: 0;
     flex: 1;
-    gap: 52px;
+    gap: 50px;
     height: 0px;
     display: flex;
     justify-content: center;
@@ -287,9 +292,9 @@ a {
     justify-content: center;
   }
   .navigation__link {
-    font-family: Open Sans;
+    font-family: Poppins;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 24px;
     letter-spacing: 0.005em;
     text-align: center;
@@ -298,10 +303,7 @@ a {
 
     text-decoration: none;
   }
-  .navigation__link:hover,
-  .navigation__link:focus {
-    background: transparent;
-  }
+
   .header__icon-home-img {
     display: none;
   }
@@ -312,189 +314,211 @@ a {
 
 .home {
   width: 375px;
-  height: 822px;
+  height: 812px;
 
-  padding: 516px 16px 0px;
+  padding: 148px 16px 0px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-image: url("/image/home/hero_section.png");
+  background-image: url("/img/home/hero_section.png");
   margin: auto;
 }
 
 .home__container-top {
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: center;
 }
 .home-title {
-  font-family: Nunito;
-  font-size: 36px;
-  font-weight: 800;
-  line-height: 58px;
-  text-align: left;
+  font-family: Verdana;
+  font-size: 28px;
+  font-weight: 900;
+  line-height: 50px;
+  text-align: center;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  text-transform: uppercase;
-  color: #9cfdfc;
-  text-shadow: 0px 4px 12px #9cfdfc66;
-}
+  color: #d9393a;
 
+  -webkit-text-stroke: 2px #111111d9;
+  text-transform: uppercase;
+  text-shadow: -4px 4px 0px #00000099;
+}
+.home-title-two {
+  font-family: Verdana;
+  font-size: 28px;
+  font-weight: 900;
+  line-height: 50px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #ffffff;
+
+  -webkit-text-stroke: 2px #111111d9;
+  text-transform: uppercase;
+  text-shadow: -4px 4px 0px #00000099;
+}
 .home-text {
-  font-family: Open Sans;
+  font-family: Poppins;
   font-size: 16px;
   font-weight: 400;
-  line-height: 24px;
+  line-height: 28px;
   letter-spacing: 0.005em;
-  text-align: left;
+  text-align: center;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
 
   color: rgba(250, 250, 250, 1);
-  padding: 8px 0 32px;
+  padding: 16px 0 398px;
 }
 
 @media screen and (min-width: 1200px) {
   .home {
     width: 1440px;
     height: 800px;
-    padding: 286px 108px 0px;
-    background-image: url("/image/home/hero_section\ \(1\).png");
-  }
-
-  .home-title {
-    font-family: Nunito;
-    font-size: 64px;
-    font-weight: 800;
-    line-height: 80px;
-    text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-
-    width: 600px;
+    padding: 152px 0px 0px;
+    background-image: url("/img/home/hero_section\ \(1\).png");
   }
   .home-title-two {
-    font-family: Nunito;
-    font-size: 56px;
+    font-family: Verdana;
+    font-size: 64px;
     font-weight: 700;
-    line-height: 68px;
-    letter-spacing: 0.005em;
-    text-align: left;
+    line-height: 72px;
+    text-align: center;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
   }
+  .home-title {
+    font-family: Verdana;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 72px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+
   .home-text {
-    font-family: Open Sans;
-    font-size: 18px;
+    font-family: Poppins;
+    font-size: 20px;
     font-weight: 400;
     line-height: 28px;
     letter-spacing: 0.005em;
-    text-align: left;
+    text-align: center;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
 
-    padding: 8px 0 48px;
+    padding: 16px 0 40px;
   }
 }
 .about {
-  padding: 60px 16px 0px;
+  padding: 60px 16px;
   margin: auto;
   width: 375px;
-  height: 720px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-image: url("/image/about/About.png");
 }
 
 .about-title {
-  font-family: Nunito;
-  font-size: 28px;
+  font-family: Verdana;
+  font-size: 24px;
   font-weight: 700;
-  line-height: 42px;
+  line-height: 38px;
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  color: #e0afff;
+  color: #111111d9;
   text-transform: uppercase;
 }
 
 .about-text {
-  font-family: Open Sans;
+  font-family: Poppins;
   font-size: 14px;
   font-weight: 400;
   line-height: 22px;
-  letter-spacing: 0.005em;
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
 
-  padding: 24px 0px 0;
+  padding: 24px 0px;
 }
 .about-text-bold {
-  font-family: Open Sans;
+  font-family: Poppins;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 22px;
-  letter-spacing: 0.005em;
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
+}
+.about-img {
+  width: 343px;
+  height: 302px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  border: 4px solid #111111d9;
+}
+
+.about-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 @media screen and (min-width: 1200px) {
   .about {
-    padding: 150px 108px 0 628px;
+    padding: 110px 108px;
     margin: auto;
     width: 1440px;
-    height: 482px;
+
     display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: start;
-    background-image: url("/image/about/About\ \(1\).png");
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
   }
 
   .about-title {
-    font-family: Nunito;
-    font-size: 48px;
+    font-family: Verdana;
+    font-size: 40px;
     font-weight: 700;
-    line-height: 58px;
+    line-height: 54px;
     text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
   }
 
   .about-text {
-    font-family: Open Sans;
+    font-family: Poppins;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
-    letter-spacing: 0.005em;
     text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
+    width: 704px;
 
-    padding: 40px 0 0;
+    padding: 32px 0 0;
   }
   .about-text-bold {
-    font-family: Open Sans;
+    font-family: Poppins;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 24px;
     letter-spacing: 0.005em;
     text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
+  }
+  .about-img {
+    width: 496px;
+    height: 302px;
+    border: none;
   }
 }
 .how {
   width: 375px;
   margin: auto;
-  padding: 30px 16px 0;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-image: url("/image//how/How\ to\ Play\ Section\ \(2\).png");
+  padding: 60px 16px;
+  background: #aab2b7;
 }
 
 .how-list {
@@ -505,11 +529,12 @@ a {
 }
 .how-item {
   width: 288px;
-  height: 403px;
-  padding: 24px;
-  border-radius: 8px;
+  height: 419px;
+  padding: 20px;
+  border-radius: 20px;
   margin: 0 5px;
-  background: #4a47a3;
+  background: #ffeb00;
+  border: 4px solid #ffffff;
 }
 .how-img {
   margin: auto;
@@ -517,22 +542,19 @@ a {
 .how-text-bold {
   padding: 19px 0 8px;
 
-  font-family: Open Sans;
+  font-family: Poppins;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 24px;
-  letter-spacing: 0.005em;
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  color: #9cfdfc;
 }
 .how-text {
-  font-family: Open Sans;
+  font-family: Poppins;
   font-size: 14px;
   font-weight: 400;
   line-height: 22px;
-  letter-spacing: 0.005em;
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
@@ -546,130 +568,284 @@ a {
   .how {
     width: 1440px;
     margin: auto;
-    padding: 60px 108px;
+    padding: 123px 108px;
   }
 
   .how-item {
     width: 288px;
-    height: 411px;
+    height: 445px;
 
     margin: 0 12px;
   }
+  .how-list {
+    width: auto;
+    padding-top: 104px;
 
+    margin: auto;
+  }
   .how-text-bold {
-    font-family: Open Sans;
+    font-family: Poppins;
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 26px;
-    letter-spacing: 0.005em;
     text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
   }
   .how-text {
-    font-family: Open Sans;
+    font-family: Poppins;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
-    letter-spacing: 0.005em;
     text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
   }
 }
 
-.characters {
-  padding: 30px 16px;
+.why {
+  padding: 60px 16px;
   margin: auto;
   width: 375px;
+}
+
+.why-list {
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
+  gap: 24px;
+}
+.why-item {
+  width: 343px;
+  height: 306px;
+  padding: 24px;
+  border-radius: 20px;
+  background: #ffeb00;
+  border: 4px solid #111111d9;
+}
+.why-item-two {
+  background: #bf8dff;
+}
+.why-item-three {
+  background: #00b6ff;
+}
+.why-img {
+  margin: auto;
+}
+.why-text-bold {
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+
+  padding: 24px 0 8px;
+}
+.why-text {
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .why {
+    padding: 120px 108px;
+    margin: auto;
+    width: 1440px;
+  }
+
+  .why-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 80px;
+    gap: 24px;
+  }
+  .why-item {
+    width: 392px;
+    height: 306px;
+
+    padding: 24px 60px;
+    border-radius: 20px;
+    background: #ffeb00;
+    border: 4px solid #111111d9;
+  }
+  .why-item-two {
+    background: #bf8dff;
+  }
+  .why-item-three {
+    background: #00b6ff;
+  }
+  .why-item-four {
+    width: 600px;
+    height: 306px;
+    padding: 48px 86px;
+    background: #00b6ff;
+  }
+  .why-item-five {
+    width: 600px;
+    height: 306px;
+    padding: 48px 86px;
+    background: #ffeb00;
+  }
+  .why-img {
+    margin: auto;
+  }
+  .why-text-bold {
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+    padding: 24px 0 8px;
+  }
+  .why-text {
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+}
+.characters {
+  padding: 60px 16px;
+  margin: auto;
+  width: 375px;
+  background: #aab2b7;
+}
+.characters-title-text {
+  padding-top: 8px;
+  padding-bottom: 40px;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0.005em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
 }
 
 .characters-list {
   display: flex;
   flex-direction: column;
-  padding-top: 40px;
-  padding-bottom: 24px;
+  padding-top: 24px;
   gap: 24px;
 }
 
 .characters-text-bold {
-  font-family: Open Sans;
+  font-family: Poppins;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 22px;
-  letter-spacing: 0.005em;
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
 
-  color: #9cfdfc;
+  color: #d9393a;
 }
 .characters-text {
-  font-family: Open Sans;
+  font-family: Poppins;
   font-size: 14px;
   font-weight: 400;
   line-height: 22px;
-  letter-spacing: 0.005em;
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
 }
+
 .characters-img {
   width: 343px;
-  height: 230px;
+  height: 302px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  border: 4px solid #ffffff;
+}
+
+.characters-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 @media screen and (min-width: 1200px) {
   .characters {
-    padding: 60px 108px;
+    padding: 120px 108px;
     margin: auto;
     width: 1440px;
   }
   .characters-container {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     gap: 24px;
-    padding-top: 80px;
+    padding-top: 82px;
   }
+  .characters-title-text {
+    padding-top: 8px;
+    padding-bottom: 0px;
+
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0.005em;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+
   .characters-list {
     display: flex;
     flex-direction: column;
-    padding: 0;
+    padding-top: 0px;
     gap: 24px;
   }
 
   .characters-text-bold {
-    font-family: Open Sans;
+    font-family: Poppins;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 24px;
     letter-spacing: 0.005em;
     text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
+
+    color: #d9393a;
   }
   .characters-text {
-    font-family: Open Sans;
+    font-family: Poppins;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
-    letter-spacing: 0.005em;
     text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
+    width: 600px;
   }
+
   .characters-img {
     width: 600px;
-    height: 432px;
+    height: 384px;
+    border: none;
   }
 }
 .reviews {
   width: 375px;
   margin: auto;
-  padding: 30px 16px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-image: url("/image//how/How\ to\ Play\ Section\ \(2\).png");
+  padding: 60px 16px;
 }
 
 .reviews-list {
@@ -680,33 +856,32 @@ a {
 }
 .reviews-item {
   width: 343px;
-  height: 252px;
-  padding: 31px 16px;
-  border-radius: 12px;
+  height: 264px;
+  padding: 24px 16px;
+  border-radius: 20px;
   margin: 0 5px;
-  background: #4a47a3;
+  background: #00b6ff;
+  border: 4px solid #111111d9;
 }
 .reviews-img {
   margin: auto;
 }
 .reviews-text-bold {
   padding: 16px 0 8px;
-  font-family: Open Sans;
+
+  font-family: Poppins;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 24px;
-  letter-spacing: 0.005em;
   text-align: center;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  color: #9cfdfc;
 }
 .reviews-text {
-  font-family: Open Sans;
+  font-family: Poppins;
   font-size: 14px;
   font-weight: 400;
   line-height: 22px;
-  letter-spacing: 0.005em;
   text-align: center;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
@@ -738,7 +913,7 @@ a {
   .reviews {
     width: 1440px;
     margin: auto;
-    padding: 60px 108px 178px;
+    padding: 120px 108px 94px;
   }
   .reviews-list {
     width: auto;
@@ -746,11 +921,10 @@ a {
   }
   .reviews-item {
     width: 392px;
-    height: 246px;
+    height: 274px;
     padding: 24px 16px;
-    border-radius: 12px;
+
     margin: 0 12px;
-    background: #4a47a3;
   }
   .reviews-img {
     margin: auto;
@@ -758,21 +932,19 @@ a {
   .reviews-text-bold {
     padding: 16px 0 8px;
 
-    font-family: Open Sans;
+    font-family: Poppins;
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 26px;
-    letter-spacing: 0.005em;
     text-align: center;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
   }
   .reviews-text {
-    font-family: Open Sans;
+    font-family: Poppins;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
-    letter-spacing: 0.005em;
     text-align: center;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
@@ -786,22 +958,24 @@ a {
 }
 
 .faq {
-  padding: 30px 16px;
+  padding: 60px 16px;
   margin: auto;
   width: 375px;
+  background: #aab2b7;
 }
 .faq-container {
   padding-top: 40px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 24px;
   margin: auto;
 }
 
 .faq-item {
-  background: linear-gradient(180deg, #6c69c9 0%, #4a47a3 100%);
+  background: #ffeb00;
+  border: 3px solid #ffffff;
   padding: 16px;
-  border-radius: 8px;
+  border-radius: 18px;
 }
 
 .faq-question {
@@ -809,11 +983,10 @@ a {
   justify-content: space-between;
   align-items: center;
 
-  font-family: Open Sans;
+  font-family: Poppins;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 24px;
-  letter-spacing: 0.005em;
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
@@ -830,18 +1003,17 @@ a {
   display: none;
   padding-top: 16px;
 
-  font-family: Open Sans;
+  font-family: Poppins;
   font-size: 14px;
   font-weight: 400;
   line-height: 22px;
-  letter-spacing: 0.005em;
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
 }
 @media screen and (min-width: 1200px) {
   .faq {
-    padding: 60px 108px;
+    padding: 120px 108px;
     margin: auto;
     width: 1440px;
   }
@@ -855,11 +1027,10 @@ a {
   }
 
   .faq-question {
-    font-family: Open Sans;
+    font-family: Poppins;
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 26px;
-    letter-spacing: 0.005em;
     text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
@@ -875,11 +1046,10 @@ a {
   .faq-answer {
     display: none;
 
-    font-family: Open Sans;
+    font-family: Poppins;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
-    letter-spacing: 0.005em;
     text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
@@ -888,11 +1058,7 @@ a {
 .gallery {
   width: 375px;
   margin: auto;
-  padding: 30px 16px 60px 16px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-image: url("/image//how/How\ to\ Play\ Section\ \(2\).png");
+  padding: 60px 16px;
 }
 
 .gallery__list {
@@ -902,13 +1068,12 @@ a {
   margin: auto;
 }
 .gallery__item {
-  width: 200px;
-  height: 266px;
-  border: 4px solid #ffffff;
+  width: 212px;
+  height: 288px;
+  border-radius: 8px;
   overflow: hidden;
   position: relative;
   margin: 0 10px;
-  border-radius: 8px;
 }
 
 .gallery__image {
@@ -922,7 +1087,7 @@ a {
   .gallery {
     width: 1440px;
     margin: auto;
-    padding: 60px 108px 120px 108px;
+    padding: 120px 108px;
   }
 
   .gallery__item {
@@ -941,11 +1106,10 @@ a {
 }
 
 .footer {
-  background: #1b1b2f;
-
+  background: #333333;
+  border-top: 1px solid #d9393a;
   color: #ffffff;
   padding: 40px 16px;
-  border-top: 1px solid #9cfdfc;
 }
 .footer-container {
   display: flex;
@@ -964,11 +1128,10 @@ a {
   gap: 57px;
 }
 .footer-text {
-  font-family: Open Sans;
+  font-family: Poppins;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 22px;
-  letter-spacing: 0.005em;
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
@@ -978,11 +1141,10 @@ a {
 }
 
 .footer-copyright {
-  font-family: Open Sans;
+  font-family: Poppins;
   font-size: 14px;
   font-weight: 400;
   line-height: 22px;
-  letter-spacing: 0.005em;
   text-align: center;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
@@ -1010,22 +1172,20 @@ a {
     gap: 32px;
   }
   .footer-text {
-    font-family: Open Sans;
+    font-family: Poppins;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 24px;
     letter-spacing: 0.005em;
     text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
   }
-
   .footer-copyright {
-    font-family: Open Sans;
+    font-family: Poppins;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
-    letter-spacing: 0.005em;
     text-align: center;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
@@ -1037,34 +1197,33 @@ a {
   padding: 124px 16px 116px;
 }
 .policy-terms-title {
-  font-family: Nunito;
-  font-size: 28px;
+  font-family: Verdana;
+  font-size: 24px;
   font-weight: 700;
-  line-height: 42px;
+  line-height: 38px;
   text-align: center;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
+
   text-transform: uppercase;
 }
 
 .policy-terms-text {
-  font-family: Open Sans;
+  font-family: Poppins;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 24px;
-  letter-spacing: 0.005em;
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
 
-  padding-top: 20px;
+  padding-top: 32px;
 }
 .policy-terms-texts {
-  font-family: Open Sans;
+  font-family: Poppins;
   font-size: 14px;
   font-weight: 400;
   line-height: 22px;
-  letter-spacing: 0.005em;
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
@@ -1072,45 +1231,42 @@ a {
   padding-top: 8px;
 }
 .policy-terms-text-one {
-  font-family: Open Sans;
+  font-family: Poppins;
   font-size: 14px;
   font-weight: 400;
   line-height: 22px;
-  letter-spacing: 0.005em;
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
 
-  padding-top: 20px;
+  padding-top: 8px;
 }
 
 .terms-list {
   list-style-type: disc;
 
   padding: 20px 0 20px 25px;
-  font-family: Open Sans;
+  font-family: Poppins;
   font-size: 14px;
   font-weight: 400;
   line-height: 22px;
-  letter-spacing: 0.005em;
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-
+  padding-top: 8px;
   display: flex;
   flex-direction: column;
 }
 
 .terms-lists {
   list-style-type: disc;
-
+  padding-top: 8px;
   padding-left: 25px;
 
-  font-family: Open Sans;
+  font-family: Poppins;
   font-size: 14px;
   font-weight: 400;
   line-height: 22px;
-  letter-spacing: 0.005em;
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
@@ -1120,7 +1276,7 @@ a {
   text-decoration: none;
 }
 .email-link-color {
-  color: #9cfdfc;
+  color: #006aff;
   text-decoration: none;
 }
 @media screen and (min-width: 1200px) {
@@ -1129,21 +1285,20 @@ a {
     align-items: start;
   }
   .policy-terms-title {
-    font-family: Nunito;
-    font-size: 48px;
+    font-family: Verdana;
+    font-size: 40px;
     font-weight: 700;
-    line-height: 58px;
+    line-height: 54px;
     text-align: center;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
   }
 
   .policy-terms-text {
-    font-family: Open Sans;
-    font-size: 18px;
-    font-weight: 600;
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 500;
     line-height: 26px;
-    letter-spacing: 0.005em;
     text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
@@ -1151,8 +1306,8 @@ a {
     padding-top: 40px;
   }
   .policy-terms-texts {
-    font-family: Open Sans;
-    font-size: 18px;
+    font-family: Poppins;
+    font-size: 20px;
     font-weight: 400;
     line-height: 28px;
     letter-spacing: 0.005em;
@@ -1161,8 +1316,8 @@ a {
     text-decoration-skip-ink: none;
   }
   .policy-terms-text-one {
-    font-family: Open Sans;
-    font-size: 18px;
+    font-family: Poppins;
+    font-size: 20px;
     font-weight: 400;
     line-height: 28px;
     letter-spacing: 0.005em;
@@ -1177,8 +1332,8 @@ a {
     list-style-type: disc;
 
     padding: 20px 0 20px 25px;
-    font-family: Open Sans;
-    font-size: 18px;
+    font-family: Poppins;
+    font-size: 20px;
     font-weight: 400;
     line-height: 28px;
     letter-spacing: 0.005em;
@@ -1188,6 +1343,7 @@ a {
 
     display: flex;
     flex-direction: column;
+    padding-top: 16px;
   }
 
   .terms-lists {
@@ -1195,8 +1351,8 @@ a {
 
     padding-left: 25px;
 
-    font-family: Open Sans;
-    font-size: 18px;
+    font-family: Poppins;
+    font-size: 20px;
     font-weight: 400;
     line-height: 28px;
     letter-spacing: 0.005em;
